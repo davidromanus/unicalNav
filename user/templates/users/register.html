@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.1">
+</head>
+<body>
+	<h1>Register</h1>
+	<div>
+		<form method="post">
+			{% csrf_token %}
+			<fieldset>
+				<legend>Jogn legend</legend>
+				{{ form }}
+			</fieldset>
+			<div>
+				<button type="submit">Create account</button>
+			</div>
+		</form>
+		<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+	</div>
+</body>
+</html>
